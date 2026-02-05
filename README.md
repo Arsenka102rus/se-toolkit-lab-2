@@ -1,23 +1,23 @@
-# Lab 01 – Products, Architecture & Roles
+# Lab 01 – Product architecture, tech roles, & your skills
 
-To kickstart the course, you will explore two things:
+Questions:
+
+- Do you know what skills are needed to build software projects?
+- Have you thought about which tech role you want to pursue as your career?
+
+In this lab, we will explore three things:
 
 1. How real software products may be structured;
-2. What kind of engineers may build and operate them.
+2. What kind of engineers may build and operate them;
+3. How your skills compare to market demands.
+
+Along the way, you'll practice using `Git` and `GitHub` — essential tools for collaboration between developers.
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
 - [Learning outcomes](#learning-outcomes)
 - [Tasks overview](#tasks-overview)
-- [Submission checklist](#submission-checklist)
-- [Repo structure](#repo-structure)
 - [Tasks](#tasks)
-  - [Time estimates](#time-estimates)
-  - [Lab setup](#lab-setup)
-  - [Required tasks](#required-tasks)
-  - [Optional tasks](#optional-tasks)
-  - [Homework](#homework)
 
 ## Learning outcomes
 
@@ -27,82 +27,69 @@ By the end of this lab, you should be able to:
 - Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
 - Reflect on your career in tech, examine your current skillset, and plan for the future.
 
+After this lab, you should be able to say:
+
+> I can use `Git` and `GitHub`.
+>
+> I understand how software products can be structured.
+>
+> I know how I can grow as an IT specialist.
+
 ## Tasks overview
 
-To complete this lab, you'll need to:
+```console
+□ Setup   — fork repo, find a partner
+□ Task 0  — practice git workflow
+□ Task 1  — analyze a product's architecture
+□ Task 2  — map components to tech roles
+□ Task 3  — compare your skills to market demands
+```
 
-- Set up your `GitHub` account and fork this repo.
-- Pick an existing digital product.
-- Study its architecture: components, data flow, deployment.
-- Map components to tech roles and skills using real job postings and `roadmap.sh`.
-- Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
+In this lab, we will simulate some of the real-life engineering practices:
 
-This and all other lab assignments will simulate some of the real-life engineering practices:
-
-- Follow processes;
 - Communicate via issues/PRs;
-- Keep the work reviewable;
 - Check your work against acceptance criteria;
 - Write clear commit messages.
 
-## Submission checklist
+### Pair work and TA
 
-As your proceed with the lab:
+You'll work with a partner throughout this lab. You complete tasks individually, but review each other's work via pull requests.
 
-- Show your progress to the TA. TA will mark your progress.
-
-By the end of the lab:
-
-- Make sure that each task that you have completed has a corresponding issue linked to a PR.
-- Close the issues for which all related activities are done.
-
-## Repo structure
-
-- [`.github/ISSUE_TEMPLATE/01-task.yml`](./.github/ISSUE_TEMPLATE/01-task.yml) - an issue form for a task.
-- [`.github/pull_request_template.md`](./.github/pull_request_template.md) - a template for PRs.
-- [`docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
-- [`.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
-- [`.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
-- [`lab/appendix`](./lab/appendix) - Additional info.
+As your proceed with the lab, show your progress to the TA.
 
 ## Tasks
 
-### Time estimates
-
-Lab setup + Required tasks
-
-| Task      | Time             |
-| --------- | ---------------- |
-| Lab setup | ~30 min          |
-| Task 1    | ~30–40 min       |
-| Task 2    | ~30–40 min       |
-| Task 3    | ~30–40 min       |
-|           |                  |
-| **Total** | **~2–2.5 hours** |
-
-### Lab setup
+### Setup (~30 min)
 
 First complete the [lab setup](./lab/setup.md).
 
-### Required tasks
+### Required tasks (~2 hours)
 
-Follow the [procedure for tasks](./lab/tasks/required/procedure.md) for each of these tasks:
+For all required tasks, you must follow the same [`Git workflow`](./lab/tasks/required/procedure.md).
 
-1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture)
-2. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product)
-3. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs)
+1. [Practice the `Git workflow`](./lab/tasks/required/task-0.md#practice-the-git-workflow) (~15 min)
+2. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture) (~30 min)
+3. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product) (~30 min)
+4. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs) (~30 min)
 
 ### Optional tasks
 
-Complete one or more tasks below:
+Complete all optional tasks to leave up to 1 hour early (lab is 3 hours):
 
 1. [Resolve a merge conflict](./lab/tasks/optional/task-1.md#resolve-a-merge-conflict).
 2. [Add a CI check](./lab/tasks/optional/task-2.md#add-a-ci-check)
 3. [Create a release](./lab/tasks/optional/task-3.md#create-a-release)
 4. [Plan skill development](./lab/tasks/optional/task-4.md#plan-skill-development)
 
-### Homework
+### Additional Resources on Git
 
-- Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
+- Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git workflows`.
+- Short videos to build your mental model of how `Git` works:
+  - [Git Explained in 100 Seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
+  - [What is Git? Explained in 2 Minutes!](https://www.youtube.com/watch?v=2ReR1YJrNOM)
+  - [A brief introduction to Git for beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs)
+  - [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
+  - [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
 - Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
 - Read about [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
+- Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.

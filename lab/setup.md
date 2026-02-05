@@ -5,69 +5,43 @@
 1. Find a classmate to be your partner for this lab.
 2. Sit together.
 
+You'll complete tasks individually, but review each other's work via pull requests.
+
 ## Set up a fork
 
 1. Create a `GitHub` account.
 2. Fork this repo to your `GitHub` account and make your fork public.
 3. Continue your work in the forked repo.
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
-5. <details> <summary> (Optional) Create a label for tasks (click to expand).</summary>
-
-   In the repo -> `Issues` -> `Labels`, create a new label:
-   1. Click `New label`.
-   2. Name: `task`.
-   3. Click `Create label`.
-
-   </details>
-
-6. <details> <summary>(Optional) Protect your <code>main</code> branch (click to expand).</summary>
-
-   In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
-   1. `Ruleset Name`: `push`
-   2. `Enforcement status`: `Active`
-   3. `Target branches` -> `Add target` -> `Include default branch`
-   4. Rules:
-      - [x] `Restrict deletions`
-      - [x] `Require a pull request before merging`:
-         - `Required approvals`: `1`
-         - `Require conversation resolution before merging`
-         - `Allowed merge methods`: `Merge`.
-      - [x] Block force pushes
-  
-  </details>
 
 ## Add a classmate as a collaborator
 
 1. In the repo `Settings` -> `Collaborators` -> `Add people`, add your partner as a collaborator.
 2. Make sure your collaborator has accepted the invitation sent to their email.
 
-## Set up `git`
+## Set up `Git`
 
-1. (If needed) On your computer, configure [`git`](https://git-scm.com/):
+(If needed) On your computer, configure [`Git`](https://git-scm.com/):
 
-    ```bash
-    git config --global user.name "Your Name"
-    git config --global user.email "your@email"
-    ```
-
-2. <details> <summary> (Optional) Learn more about <code>Git</code> (click to expand).</summary>
-
-   - [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
-   - [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
-
-   </details>
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email"
+```
 
 ## Set up `VS Code`
 
-1. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
+1. Install [`VS Code`](https://code.visualstudio.com/).
+
+   We chose this editor because it has built-in AI features and many useful [extensions](./appendix/vs-code.md#extensions).
+
+1. This is the [`Basic Layout`](./appendix/vs-code.md#basic-layout) of `VS Code`:
 
     ![VS Code UI](./images/vs-code-ui.png)
 
-1. (Optional) [Learn more](./appendix/vs-code.md) about `VS Code`.
-
-## Set up the shell prompt
-
-(Optional) Install [`Starship`](https://github.com/starship/starship#-installation).
+1. Try to [open `Folders`](./appendix/vs-code.md#folders).
+1. Try to [open `Terminal`](./appendix/vs-code.md#terminal).
+1. Try to [open `Source Control`](./appendix/vs-code.md#source-conrol).
+1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
 
@@ -87,33 +61,103 @@
 
 ## Set up `VS Code` extensions
 
-1. Install the recommended `VS Code` extensions (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` suggests to install them.
-2. Sign in to accounts.
-    In the `Activity Bar`:
-    1. Click `Accounts`
-    2. Click `Sign in with GitHub ...`
-    3. Repeat for the remaining extensions if there any.
+1. Install the recommended `VS Code` extensions (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` prompts to install them.
+2. If you missed the prompt:
+   1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
+   2. Click the icon `Extensions`. Alternatively, press `Ctrl+Shift+X` (`Cmd+Shift+G` on `macOS`).
+   3. In the input field, type `@recommended`.
+   4. Look at `WORKSPACE RECOMMENDATIONS`.
+   5. Click the icon `Install Workspace Recommended extensions`.
+3. Sign in to accounts.
+    1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
+    2. Click the icon `Accounts`.
+    3. Click `Sign in with GitHub ...`.
+    4. Repeat for the remaining extensions if there are any.
 
-3. <details><summary> (Optional) Check <code>GitLens</code> (click to expand).</summary>
+---
 
-    In the `Status Bar`:
+## Optional enhancements to make your life easier
 
-    1. Click `Visualize commits on the Commit Graph`.
-    2. Make sure you can see the commit graph.
+### Coding: Set up a coding agent
 
-    In the `Activity Bar`:
+A coding agent can help you write code, explain concepts, and debug issues.
 
-    1. Click `Source Control`.
-    2. Click `GitLens` in the opened `Primary Side Bar` to open the `GitLens` panel.
-    3. In the `GitLens` panel, click `Remotes`.
-    4. Make sure `origin` points to your repo URL.
-    5. In the `GitLens` panel, click `Commits`.
-    6. Make sure you can see commits on the current branch.
+See [Coding agents](./appendix/coding-agents.md).
 
-    Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
-  
-   </details>
+### Shell: Set up the prompt
 
-## Set up a coding agent
+Starship shows your current `Git` branch, status, and other useful info directly in your terminal prompt.
 
-(Optional) Set up a free coding agent to help you with the lab. See [Coding agents](./appendix/coding-agents.md).
+Install [`Starship`](https://github.com/starship/starship#-installation).
+
+### `VS Code`: Check `GitLens`
+
+GitLens shows commit history, blame annotations, and branch visualization right inside `VS Code`.
+
+#### Look at the commit graph
+
+1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar):
+1. Click the icon `Visualize commits on the Commit Graph`.
+1. Make sure you can see the commit graph.
+
+#### Inspect remotes and the current branch
+
+1. Open [`Source Control`](../lab/appendix/vs-code.md#source-control).
+1. Click `GitLens` in the opened `Primary Side Bar`.
+1. In the `GitLens` panel, click the icon `Remotes`.
+1. Make sure `origin` points to your repo URL (hover over it an look at URLs).
+1. In the `GitLens` panel, click the icon `Commits`.
+1. Make sure you can see commits on the current branch.
+
+#### (Optional) Learn more about `GitLens`
+
+See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
+
+### Repo: Protect your `main` branch
+
+Branch protection prevents accidental pushes directly to `main`.
+This enforces the PR workflow and ensures all changes are reviewed.
+
+1. Open the repo.
+2. Go to `Settings`.
+3. Go to `Code and automation`.
+4. Go to `Rules`.
+5. Go to `Rulesets`.
+6. Go to `New ruleset`.
+7. Go to `Add branch ruleset`.
+8. Set:
+
+   1. `Ruleset Name`: `push`
+   2. `Enforcement status`: `Active`
+   3. `Target branches` -> `Add target` -> `Include default branch`
+   4. Rules:
+      - [x] `Restrict deletions`
+      - [x] `Require a pull request before merging`:
+         - `Required approvals`: `1`
+         - `Require conversation resolution before merging`
+         - `Allowed merge methods`: `Merge`.
+      - [x] Block force pushes
+
+### Repo: Create a label for tasks
+
+> [!TIP]
+> If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../.github/ISSUE_TEMPLATE/01-task.yml).
+
+[Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
+
+With a `task` label, you can see in one view all lab tasks that have this label.
+
+In the repo -> `Issues` -> `Labels`, create a new label:
+
+1. Click `New label`.
+2. Name: `task`.
+3. Click `Create label`.
+
+Then [add this label](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) to some of your task issues.
+
+Next, in the repo -> `Issues`, filter by the label:
+
+1. Click `Labels`.
+2. In the `Filter labels` input area, write `task`.
+3. Click the suggested label.
+4. You'll see all issues that have this label.

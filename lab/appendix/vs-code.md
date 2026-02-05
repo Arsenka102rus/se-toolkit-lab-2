@@ -4,17 +4,27 @@
 
 Basic UI elements in `VS Code`.
 
-### Docs
-
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
-
-## `Activity Bar`, `Status Bar`
-
-Menus of extensions.
+![VS Code UI](../images/vs-code-ui.png)
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+
+## `Activity Bar`
+
+Menus of extensions on the side.
+
+Docs:
+
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+
+## `Status Bar`
+
+Statuses and menus of extensions at the bottom.
+
+Docs:
+
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Command Palette`
 
@@ -25,12 +35,23 @@ Docs:
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
+To open the `Command Palette`:
+
+1. Press `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
+
 To run a command:
 
-- Open `Command Palette`: `Ctrl + Shift + P` (`Cmd + Shift + P` on `macOS`).
-- Type the command.
-- Select an appropriate command.
-- Press `Enter`.
+1. Open the `Command Palette`.
+1. Start typing a command.
+1. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
+1. Press `Enter`.
+
+To open a file:
+
+1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
+2. Start typing the name of the file.
+3. Select a file (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
+4. Press `Enter`.
 
 ## `Terminal`
 
@@ -38,27 +59,58 @@ Run terminal commands inside `VS Code`.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/terminal/getting-started)
+- [docs](https://code.visualstudio.com/docs/terminal/getting-started)
 
 To open a terminal:
 
-- Press ```Ctrl + ` ``` (```Cmd + ` ``` on `macOS`)
+- Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
+
+To close a terminal:
+
+- Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
+
+Copy inside the terminal:
+
+- Select text.
+- Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
+
+## `Folders`
+
+View the file tree.
+
+Docs:
+
+- [docs](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
+
+To open `Folders`:
+
+- [`Activity Bar`](#activity-bar) -> Click `Folders`.
 
 ## `Source Control`
 
 Interact with `Git` via `VS Code` UI.
 
+Ways to open:
+
+- [`Activity Bar`](#activity-bar) -> Click `Source Control`
+- `Ctrl+Shift+G G` or `Ctrl+Shift+G` on `macOS`
+
+Ways to close:
+
+- [`Activity Bar`](#activity-bar) -> Click `Source Control`
+- `Ctrl+B` (`Cmd+B` on `macOS`)
+
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/sourcecontrol/overview)
+- [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
-## `Extension Marketplace`
+## `Extensions`
 
-Install other people's extensions for `VS Code` to enable new functionality.
+Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplace.visualstudio.com/vscode) to enable new functionality.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+- [docs](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
 
 ## `Custom Layout`
 
@@ -66,7 +118,7 @@ Change the [Basic Layout](#basic-layout).
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/custom-layout)
+- [docs](https://code.visualstudio.com/docs/configure/custom-layout)
 
 Use cases:
 
@@ -78,7 +130,15 @@ Keyboard shortcuts for various commands.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
+- [docs 1](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference)
+- [docs 2](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-editor)
+
+Useful:
+
+- `Alt+-` (`Ctrl+-` on `macOS`) - go back.
+- `Ctrl+Tab` - switch to the previous editor.
+- `Ctrl+F` (`Cmd+F` on `macOS`) - search in the current editor.
+- `Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
 
 ## `settings.json`
 
@@ -88,9 +148,9 @@ This repo has [`.vscode/settings.json`](../../.vscode/settings.json).
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/settings#_settings-json-file).
+- [docs](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
 ### Settings
 
 - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
-- [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl + S` (or `Cmd + S` on `macOS`) to save code.
+- [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.

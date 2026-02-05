@@ -51,5 +51,6 @@ Based on your intuition and some research, list **tech skills that are required 
 - [ ] Components mapped to roles (at least 5 components)
 - [ ] Role mapping seems reasonable for this product
 - [ ] 5 roles described with responsibilities
-- [ ] Common skills section is present
-- [ ] Common skills seem reasonable
+- [ ] Common skills are listed
+- [ ] Partner reviewed and approved
+- [ ] PR merged

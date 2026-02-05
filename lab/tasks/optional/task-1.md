@@ -1,10 +1,10 @@
 # Resolve a merge conflict
 
-**Time:** ~20-30 min
+**Time:** ~15-20 min
 
-**Purpose:** Learn how to handle merge conflicts in Git, a common challenge in collaborative software development.
+**Purpose:** Learn how to resolve merge conflicts — a common situation when working with Git.
 
-**Context:** In team environments, multiple developers often work on the same codebase simultaneously, leading to situations where changes conflict with each other. Understanding how to resolve these conflicts is essential for maintaining a healthy codebase.
+**Context:** In team environments, multiple developers often work on the same codebase simultaneously. They might edit the same lines of code, leading to situations where changes conflict with each other. Understanding how to resolve these conflicts is essential for maintaining a healthy codebase.
 
 ## Steps
 
@@ -12,99 +12,140 @@
 
 Title: `[Task] Resolve a merge conflict`
 
-### 2. Learn `Git` basics (Optional)
-
-Complete the first three tasks in `Introduction Sequence` on [Learn Git Branching](https://learngitbranching.js.org/).
-
-### 3. Prepare your environment
-
-Open your cloned fork in `VS Code`.
-
-### 4. Switch to the `main` branch
+### 2. Create practice branches
 
 ```console
 git switch main
+git branch conflict-branch-1
+git branch conflict-branch-2
 ```
 
-Alternatively, use [`Command Palette`](../../appendix/vs-code.md#command-palette) -> `GitLens: Git Switch to...`.
+Alternatively:
 
-### 5. Create two branches from `main`
+1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+2. Run `GitLens: Git Create Branch...`.
+3. Select `main`.
+4. Enter `conflict-branch-1`.
+5. Press `Create Branch`.
+6. Repeat for another branch.
+
+### 3. Make a change on the `conflict-branch-1`
 
 ```console
-git branch feature-1
-git branch feature-2
+git switch conflict-branch-1
 ```
 
-Alternatively, use `Command Palette` -> `GitLens: Git Create Branch...`.
+Alternatively:
 
-### 6. Modify the same file on `feature-1` branch
+1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+2. Run `GitLens: Git Switch to...`.
+3. Start typing and select `conflict-branch-1`.
+4. Press `Enter`.
 
-On `feature-1` branch:
+Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — change the comment text to something else (e.g., "Add your name here").
 
-- Edit a file (e.g., change the first line in `README.md`).
-- Commit your changes.
-
-### 7. Modify the same lines on `feature-2` branch
-
-On `feature-2` branch:
-
-- Edit the **same lines** in the same file that you edited on the `feature-1` branch.
-- Note that the changes on `feature-2` must differ from changes on `feature-1`.
-- Commit your changes.
-
-### 8. Merge `feature-2` into `feature-1`
+Commit:
 
 ```console
-git switch feature-1
-git merge feature-2
+git add CONTRIBUTORS.md
+git commit -m "docs: update contributors instructions"
 ```
 
-This will create a merge conflict since both branches modified the same lines.
+### 4. Make a conflicting change on `conflict-branch-2`
 
-### 9. Resolve the merge conflict
+```console
+git switch conflict-branch-2
+```
 
-- In the `Primary Sidebar` -> `Merge Changes` -> Click the file that you changed. The file will open.
+Edit `CONTRIBUTORS.md` — change the same comment to something different (e.g., "Write your name below").
 
-- Click inside that file.
+Commit:
 
-- Click `Resolve in Merge Editor` to resolve the merge conflict in the [3-way merge editor](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts#_use-the-3way-merge-editor).
+```console
+git add CONTRIBUTORS.md
+git commit -m "docs: update contributors comment"
+```
 
-- Accept a change that you like more.
+### 5. Merge and resolve the conflict
 
-- Click `Complete Merge`.
+You're currently on the branch `conflict-branch-2`.
 
-### 10. Review your changes
+```console
+git merge conflict-branch-1
+```
 
-- In the `Primary Sidebar` -> `Source Control` -> `Staged Changes` -> Click the file to see changes that you applied.
+#### Resolve the conflict using without the merge editor
 
-- Click `Continue`.
+`Git` will report a conflict.
 
-### 11. Push your branch
+Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — you'll see conflict markers:
 
-Click `Publish Branch` to push `feature-1` to `GitHub`.
+```console
+<<<<<<< HEAD
+<!-- Write your name below -->
+=======
+<!-- Add your name here -->
+>>>>>>> conflict-practice
+```
 
-### 12. Create a pull request
+Edit the file to keep one version (or combine them). Remove the conflict markers.
 
-Create a PR from `feature-1` to `main`.
+Then complete the merge:
 
-### 13. Document your resolution
+```console
+git add CONTRIBUTORS.md
+git commit -m "docs: resolve merge conflict in contributors"
+```
 
-In the PR summary, explain:
+#### Resolve the conflict using the merge editor
 
-- What conflicted (1–2 sentences).
-- How you resolved the conflict (1–2 sentences).
+1. Open [`Source Control`](../../appendix/vs-code.md#source-control).
+2. Go to `Merge Changes`.
+3. Click the file that you changed.
+4. The file will open.
+5. Click inside that file.
+6. Click `Resolve in Merge Editor` to resolve the merge conflict in the [3-way merge editor](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts#_use-the-3way-merge-editor).
+7. Accept a change that you like more.
+8. Click `Complete Merge`.
+9. Open [`Source Control`](../../appendix/vs-code.md#source-control).
+10. Go to `Staged Changes`.
+11. Click the file to see changes that you applied.
+12. Click `Continue`.
 
-### 14. Complete the task
+### 6. Create a PR
 
-- Provide a link to the PR in the issue description.
-- Close the PR. Don't merge it.
-- Close the issue.
+Create a PR from `conflict-branch-2` to `main`.
+
+Don't merge it.
+
+Link the issue as usually.
+
+### 7. Clean up
+
+Delete the practice branches:
+
+```console
+git branch -d conflict-branch-1
+git branch -d conflict-branch-2
+```
+
+Alternatively:
+
+1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+2. Start typing and select `GitLens: Git Delete Branch...`.
+3. Press `Enter`.
+4. Select `conflict-branch-1` and `conflict-branch-2`.
+5. Press `Enter`.
+6. Select `Delete Branches`.
+7. Press `Enter`.
+
+Close the issue.
+
+Close the PR.
 
 ## Acceptance criteria
 
 - [ ] Issue created
-- [ ] Successfully resolved a merge conflict
-- [ ] Created a pull request with explanation of the conflict and resolution
-- [ ] Provided link to the PR in the issue description
-- [ ] Closed the PR without merging
+- [ ] Successfully created and resolved a merge conflict
 - [ ] Closed the issue
+- [ ] PR is not merged

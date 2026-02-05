@@ -2,16 +2,9 @@
 
 ## Summary
 
-<!-- What does this PR do? (2–3 sentences max). -->
-
-## Linked issues
-
-<!--
-If your changes are related to issues, please list them here. Example:
- 
-- #12
-- #20
-- #30
+<!-- What does this PR do? (2–3 sentences max). 
+Example:
+- Closes #<issue-number>
 -->
 
 ---
@@ -22,7 +15,7 @@ If your changes are related to issues, please list them here. Example:
 <!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 
 - [ ] I made this PR to the `main` branch **of my fork (NOT the original repo)**.
-- [ ] Linked to at least one issue (`Closes #<id>`).
+- [ ] I linked at least one issue (`Closes #<issue-number>`).
 - [ ] I wrote clear commit messages.
 - [ ] I reviewed my own diff before requesting review.
 - [ ] I understand the code I’m submitting (not blindly copy-pasted).

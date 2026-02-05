@@ -14,6 +14,9 @@ Title: `[Task] Product & architecture description`
 
 ### 2. Choose a product
 
+> [!IMPORTANT]
+> You and your partner must pick **different products**. This way, during PR reviews, you'll learn about each other's products.
+
 Available products:
 
 - Yandex Go
@@ -70,8 +73,9 @@ Provide:
 
 1. Embed the product's `Sequence Diagram.svg`.
 2. Provide a link to the `PlantUML` code for that [sequence diagram](../../appendix/architectural-views.md#sequence-diagram).
-3. Describe what happens when a user action described by the diagram occurs.
-4. Mention which components talk to each other and what data they exchange.
+3. Choose a group of actions (a box in the diagram, `group` or `Flow` in the `PlantUML` code).
+4. Describe what happens in that group of steps.
+5. Mention which components talk to each other and what data they exchange.
 
 #### `## Deployment`
 
@@ -107,3 +111,5 @@ List two or more questions that you couldn't answer based on the openly availabl
 - [ ] Deployment diagram is visible
 - [ ] Deployment is briefly described
 - [ ] At least 2 assumptions and 2 open questions listed
+- [ ] Partner reviewed and approved
+- [ ] PR merged

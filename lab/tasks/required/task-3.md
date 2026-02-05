@@ -80,8 +80,10 @@ In `docs/roles-and-skills.md`, in the `## Personal reflection` section write 5â€
 - [ ] Issue created
 - [ ] Role is clearly stated with a reason for choosing it
 - [ ] Skills from `roadmap.sh` are listed (both existing and lacking)
-- [ ] 5-7 job postings analyzed
+- [ ] 5-7 real job postings analyzed
 - [ ] Common and unique skills identified
 - [ ] Personal reflection written (5-10 sentences, no LLM)
 - [ ] Personal reflection appears genuine and thoughtful
 - [ ] The development goals look realistic for one semester
+- [ ] Partner reviewed and approved
+- [ ] PR merged

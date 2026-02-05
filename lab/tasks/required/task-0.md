@@ -1,0 +1,72 @@
+# Practice the `Git workflow`
+
+**Time:** ~15 min
+
+**Purpose:** Practice the [`Git workflow`](./procedure.md) before working on the main tasks.
+
+**Context:** This task is an opportunity to practice the full cycle (Issue → Branch → Commits → PR → Review → Merge).
+
+## Steps
+
+### 1. Create an issue
+
+Title: `[Task] Add my name to contributors`
+
+### 2. Create a branch
+
+On the issue page, click `Create a branch` in the right sidebar.
+
+Alternatively, use the terminal:
+
+```bash
+git checkout -b add-contributor
+```
+
+### 3. Add your name
+
+> [!NOTE]
+> Replace `<your-username>` with your `GitHub` username without `@`.
+
+1. Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md).
+2. Add your GitHub username below the comment:
+
+    ```markdown
+    <!--
+    ...
+    -->
+    - @<your-username>
+    ```
+
+3. Save the file.
+
+### 4. Commit and push
+
+```bash
+git add CONTRIBUTORS.md
+git commit -m "docs: add <your-username> to contributors"
+git push -u origin add-contributor
+```
+
+### 5. Create a Pull Request (PR)
+
+1. Go to your repo on `GitHub`.
+2. Click `Pull requests`.
+3. Click `Compare & pull request`.
+4. Title: `Add @<your-username> to contributors`.
+5. Write PR description.
+6. Click `Create pull request`.
+
+### 6. Get review and merge
+
+1. Request a review from your partner.
+2. Once your partner has approved the PR, click `Merge pull request`.
+3. Delete the branch when prompted.
+
+## Acceptance criteria
+
+- [ ] Issue created
+- [ ] Username added to `CONTRIBUTORS.md`
+- [ ] Commit message follows `type: description` format
+- [ ] PR created and linked to issue
+- [ ] Partner reviewed and approved
+- [ ] PR merged

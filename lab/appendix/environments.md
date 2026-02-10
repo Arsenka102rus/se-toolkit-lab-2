@@ -59,7 +59,7 @@ Don't store in the repo files (e.g., [`.env` files](#env-file)) that contain une
 
 If you add files containing secrets to the repo, bad people may steal the secrets from your repo and hack your app.
 
-You should use any of these methods:
+Therefore, you should use any of these methods:
 
 <!-- no toc -->
 - [Store encrypted secrets in the repo](#store-encrypted-secrets-in-the-repo)

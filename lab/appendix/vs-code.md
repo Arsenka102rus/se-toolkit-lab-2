@@ -17,6 +17,7 @@
 - [`Terminal`](#terminal)
   - [Open the `Terminal`](#open-the-terminal)
   - [Close the `Terminal`](#close-the-terminal)
+  - [Open a new `Terminal`](#open-a-new-terminal)
   - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
   - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
   - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
@@ -165,6 +166,7 @@ Actions:
 
 - [Open the `Terminal`](#open-the-terminal)
 - [Close the `Terminal`](#close-the-terminal)
+- [Open a new `Terminal`](#open-a-new-terminal)
 - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
 - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
 - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
@@ -176,6 +178,10 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 ### Close the `Terminal`
 
 Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
+
+### Open a new `Terminal`
+
+Press ```Ctrl+Shift+` ```
 
 ### Copy text inside the `Terminal`
 
